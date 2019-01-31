@@ -7,6 +7,7 @@ const app = express();
 const dbName = db.dbName
 const port = db.port;
 
+app.use(bodyParser.json()) // handle json data
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(cors())
 app.use(function(req, res, next) {
